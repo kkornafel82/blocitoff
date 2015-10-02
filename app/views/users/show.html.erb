@@ -1,0 +1,14 @@
+<h3>Welcome back <%= @user.name %></h3>
+
+<br>
+<p>Name: <%=current_user.name %></p> 
+<p> Email: <%= @user.email%> </p>
+<p> # of times signed in: <%= @user.sign_in_count %> </p>
+<br>
+<br>
+<p><%= link_to "Change password", edit_user_registration_path, class: 'btn btn-primary'%></p>
+
+
+
+
+  
