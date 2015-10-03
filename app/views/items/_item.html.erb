@@ -1,11 +1,7 @@
-<%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
-  <%= comment.body %>
-  <% if comment.user %>
-    <small>
-      <em><%= comment.user.name || comment.user.email %></em>
-    </small>
-  <% end %>
-  <% if policy(comment).destroy? %>
-      <%= link_to "Delete", [comment.post, comment], method: :delete, remote: true %>
-  <% end %>
-<% end %>
+
+  
+  <%= item.name %>
+
+
+
+  
