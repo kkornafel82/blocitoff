@@ -1,15 +1,40 @@
-<h3>Welcome back <%= @user.name %></h3>
+<!DOCTYPE html>
+<html lang="en">
+<div class="container">
+<h2 class="text-center"><strong>Welcome back, <%= @user.name %>!</strong></h2>
+     <br>
+      <div class="row">
+        <div class="col-md-4">
+          <p class="text-center">Name: <%=current_user.name %></p> 
+        </div>
+        <div class="col-md-4">
+          <p class="text-center"> Email: <%= @user.email%><br><%= link_to "Change password", edit_user_registration_path, class: 'btn btn-primary btn-xs'%></p>
+        </div>
+        <div class="col-md-4">
+          <p class="text-center"> # of times signed in: <%= @user.sign_in_count %> </p>
+        </div>
+      </div>
+    
+<br>
+<br>
+
+      <div class="row">
+         <div class="col-md-8">
+           <p class="text-center"><%= render partial: 'items/item', collection: @items %></p>
+         </div>
+      </div>
+
 
 <br>
-<p>Name: <%=current_user.name %></p> 
-<p> Email: <%= @user.email%> </p>
-<p> # of times signed in: <%= @user.sign_in_count %> </p>
+<br>
+
+
 <br>
 <br>
-<p><%= link_to "Change password", edit_user_registration_path, class: 'btn btn-primary'%></p>
 
-<%= render 'items/form', item: @item, user: @user %>
+</div>
 
+</html>
 
 
   

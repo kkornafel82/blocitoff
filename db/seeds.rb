@@ -1,18 +1,19 @@
-5.times do
-   user = User.new(
-     name:     Faker::Name.name,
-     email:    Faker::Internet.email,
-     password: Faker::Lorem.characters(10)
-   )
-   user.skip_confirmation!
-   user.save!
- end
+1.times do 
+  user = User.new(
+    name:   "Kevin",
+    email:  "kkornafel82@yahoo.com",
+    password: "Terrapin11"
+    )
+
+  user.skip_confirmation!
+  user.save!
+end
 
 
-15.times do 
+5.times do 
   item = Item.create!(
-  user:   User.first,
-  name: Faker::Lorem.sentence,
+  user:  User.first,
+  name:  "These are items",
   created_at: rand(10.minutes .. 1.year).ago
   )
 

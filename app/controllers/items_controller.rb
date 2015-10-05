@@ -4,12 +4,13 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(params.require(:item).permit(:name))
+    @user = current_user
+    @item = Item.new
     if @item.save
       redirect_to @item, notice: "Item was saved successfully."
     else
       flash[:error] = "Error creating Item. Please try again."
-      render :new
+      redirect_to welcome_index_path
     end
   end
 
