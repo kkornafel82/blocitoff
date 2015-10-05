@@ -1,6 +1,6 @@
 <% if current_user %>
   <h4>Add an item:</h4>
-   <%= form_for (@items, url: user_items_path) do |f| %>
+   <% form_for @items do |f| %>
     Name: <%= f.text_field :name %><br>
     <br>
     <%= f.submit %>
