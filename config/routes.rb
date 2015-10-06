@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'items/new'
+  # get 'items/new'
 
-  get 'users/show'
+  # get 'users/show'
 
   devise_for :users
   get 'welcome/index'
