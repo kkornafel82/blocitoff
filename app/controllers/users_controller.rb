@@ -6,6 +6,10 @@ class UsersController < ApplicationController
   @item = Item.new
   end
 
+  def destroy
+    @item = Item.find(params[:item_id])
+  end
+
 
 
 end
