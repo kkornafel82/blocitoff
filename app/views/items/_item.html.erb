@@ -1,9 +1,9 @@
-
   <tr>
     <td class="text-center"><%= item.name %></td> 
     <td></td>
-    <td><%= link_to "", [@user, item] , method: :delete, class: 'glyphicon glyphicon-ok' %></td>
+    <td><%= link_to "",[@user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>   </td>
   </tr>
+
  
 
 
