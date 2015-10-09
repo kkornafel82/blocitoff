@@ -1,13 +1,6 @@
-  <tr>
-    <td class="text-center"><%= item.name %></td> 
-    <td></td>
-    <td><%= link_to "",[@user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>   </td>
-  </tr>
+<%= content_tag :tr, id: "item-#{item.id}" do %>
+  <td class="text-center"><%= item.name %></td> 
+  <td></td>
+  <td><%= link_to "",[@user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>   </td>
+<% end %> 
 
- 
-
-
-
-
-
-  
